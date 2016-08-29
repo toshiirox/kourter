@@ -1,6 +1,6 @@
 <?php 
 include("connexion.php");
-
+// ljhhkhlh
 class Banque {
 	public $Nom;
 	public $Taux;
@@ -46,4 +46,4 @@ while ($ligne=$listeBank->fetch()) {
 			echo $ligne->ID." ".$ligne->Nom." ".$ligne->Taux." ".$ligne->Date_modif." <br>";
 		}*/
 
-?>
+		?>
