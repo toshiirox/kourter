@@ -1,0 +1,222 @@
+/*-----------------------------------------
+CUSTOM RESET
+-----------------------------------------*/
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-size: .90em;
+  line-height: 1;
+}
+
+ul, ol {
+  padding: 0;
+  margin: 0;
+}
+ul li, ol li {
+  list-style: none;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*------------------------------------------------
+MISC
+------------------------------------------------*/
+.group:after, .block-zone > .inner:after, .block-listing .wrapper .item > .inner:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.img-fluid, .block-header .logo img, .block-listing .wrapper .inner .picture a img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+/*------------------------------------------------
+GLOBAL
+------------------------------------------------*/
+body {
+  background: url(../images/bg-1.png) repeat #fff;
+  font-family: Tahoma, Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #CA5597;
+}
+
+.block-zone {
+  padding: 0 15px;
+}
+@media (min-width: 1025px) {
+  .block-zone > .inner {
+    width: 1170px;
+  }
+}
+.block-zone > .inner {
+  margin: 0 auto;
+}
+
+/*------------------------------------------------
+HEADER
+------------------------------------------------*/
+.block-header {
+  background: #fefefe;
+  border-bottom: 2px solid #4c4c4c;
+}
+.block-header > .inner {
+  padding: 1.5em 0;
+}
+.block-header .logo {
+  display: inline-block;
+  vertical-align: middle;
+}
+.block-header .slogan {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: "Chau Philomene One", Arial, sans-serif;
+  font-size: 1.6rem;
+  color: #4c4c4c;
+}
+
+/*------------------------------------------------
+PRODUCTS
+------------------------------------------------*/
+/*    @media (min-width:$screen-md){
+      .wrapper {
+         margin: 0(-$gutter-width);
+      }
+      .item {
+        
+      }
+   }
+   @media (min-width:$screen-lg){
+      .wrapper{
+         
+      }
+      .list-type-1 & {
+         
+      }
+      .item {
+         
+      }
+   } */
+.block-filter {
+  display: none;
+}
+@media (min-width: 768px) {
+  .block-filter {
+    display: inline;
+  }
+}
+
+.block-listing .wrapper {
+  margin: 0 -15px;
+}
+.block-listing .wrapper .item {
+  padding: 0 15px 15px;
+}
+.block-listing .wrapper .item > .inner {
+  padding: 30px 0;
+}
+@media (min-width: 768px) {
+  .list-type-1 .block-listing .wrapper .item .picture {
+    float: left;
+    width: 35%;
+  }
+  .list-type-1 .block-listing .wrapper .item .content {
+    float: left;
+    width: 65%;
+    padding: 0 0 0 15px;
+  }
+}
+@media (min-width: 768px) {
+  .list-type-2 .block-listing .wrapper .item {
+    float: left;
+    width: 50%;
+    padding: 0 15px 30px;
+  }
+}
+@media (min-width: 1025px) {
+  .list-type-3 .block-listing .wrapper .item {
+    float: left;
+    width: 33.33333%;
+    padding: 0 15px 30px;
+  }
+}
+.block-listing .wrapper .inner > .picture a img {
+  padding-top: 40px;
+}
+.block-listing .wrapper .inner .content .name {
+  background-color: #4c4c4c;
+  margin: 0;
+  margin-top: -2px;
+  padding: 5px 20px;
+  font: 30px "Chau Philomene One", Arial, sans-serif;
+}
+.block-listing .wrapper .inner .content .name a {
+  color: white;
+  text-transform: uppercase;
+}
+.block-listing .wrapper .inner .content .description {
+  color: #4c4c4c;
+  padding: 10px 0 0 0;
+  font-size: 15px;
+}
+.block-listing .wrapper .inner .content .footer {
+  padding: 30px 0 40px 0;
+}
+.block-listing .wrapper .inner .content .footer .price {
+  float: left;
+  font-weight: bold;
+}
+.block-listing .wrapper .inner .content .footer .price .from {
+  font-style: italic;
+}
+.block-listing .wrapper .inner .content .footer .price .value {
+  font-size: 22px;
+}
+.block-listing .wrapper .inner .content .footer .action {
+  float: right;
+  font-family: "Chau Philomene One", Arial, sans-serif;
+  font-size: 17px;
+  text-transform: uppercase;
+}
+
+/*------------------------------------------------
+FOOTER
+------------------------------------------------*/
+.block-footer {
+  background: #4c4c4c;
+}
+.block-footer, .block-footer a {
+  color: white;
+}
+.block-footer > .inner {
+  text-align: center;
+  font-family: "Catamaran", Tahoma, sans-serif;
+  font-size: 1rem;
+  padding: 1em 0;
+}
+
+/*# sourceMappingURL=master.css.map */

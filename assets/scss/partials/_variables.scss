@@ -1,0 +1,25 @@
+//------------------------------------------------
+// VARIABLES
+//------------------------------------------------
+
+$global-width: 1170px;
+
+$color-0: #4c4c4c;
+$color-1: #CA5597;
+$link-color: $color-1;
+
+$font-normal: Tahoma, Arial, sans-serif;
+$font-special-1: "Chau Philomene One", Arial, sans-serif;
+$font-special-2: "Catamaran", Tahoma, sans-serif;
+
+$img-path: "../images/";
+
+// Breakpoints
+$screen-md: 768px;
+$screen-lg: 1025px;
+
+// Grid
+$gutter-width: 15px;
+$nb-col-sm: 0;
+$nb-col-md: 2;
+$nb-col-lg: 3;

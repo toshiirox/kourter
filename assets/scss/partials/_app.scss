@@ -1,0 +1,226 @@
+
+/*------------------------------------------------
+MISC
+------------------------------------------------*/
+
+.group:after {
+   content: '';
+   display: table;
+   clear: both;
+}
+.img-fluid {
+   display: block;
+   margin: 0 auto;
+   max-width: 100%;
+}
+
+/*------------------------------------------------
+GLOBAL
+------------------------------------------------*/
+
+body {
+   background: url(#{$img-path}bg-1.png) repeat #fff;
+   font-family: $font-normal;
+}
+
+a {
+   text-decoration: none;
+   color: $link-color;
+}
+
+.block-zone {
+
+   padding: 0 $gutter-width;
+   @include breakpoint (desktop){
+      > .inner {
+         width: $global-width;
+      }
+   }
+   > .inner {
+         margin: 0 auto;
+         @extend .group;
+      }
+}
+
+/*------------------------------------------------
+HEADER
+------------------------------------------------*/
+
+.block-header {
+
+   background: #fefefe;
+   border-bottom: 2px solid $color-0;
+
+   > .inner {
+      padding: 1.5em 0;
+   }
+
+   .logo {
+      display: inline-block;
+      vertical-align: middle;
+      img {
+         @extend .img-fluid;
+      }
+   }
+
+   .slogan {
+      display: inline-block;
+      vertical-align: middle;
+      font-family: $font-special-1;
+      font-size: 1.6rem;
+      color: $color-0;
+   }
+
+} // block-header end
+
+/*------------------------------------------------
+PRODUCTS
+------------------------------------------------*/
+
+/*    @media (min-width:$screen-md){
+      .wrapper {
+         margin: 0(-$gutter-width);
+      }
+      .item {
+        
+      }
+   }
+   @media (min-width:$screen-lg){
+      .wrapper{
+         
+      }
+      .list-type-1 & {
+         
+      }
+      .item {
+         
+      }
+   } */
+
+.block-filter {
+   display: none;
+   @include breakpoint(tablet){
+      display: inline;
+   }
+}
+
+.block-listing {
+   .wrapper {
+      margin:0(-$gutter-width);
+      .item {
+         padding:0 $gutter-width ($gutter-width);
+         > .inner {
+            padding: 30px 0;
+            @extend .group;
+        }
+
+         .list-type-1 &{
+            @include breakpoint(tablet){
+               .picture {
+                  float:left;
+                  width: 35%;
+               }
+               .content {
+                  float: left;
+                  width: 65%;
+                  padding: 0 0 0 $gutter-width;
+               }
+            }
+         }
+
+         .list-type-2 &{
+            @include breakpoint(tablet){
+               float:left;
+               width: (100%/$nb-col-md);
+               padding: 0 $gutter-width ($gutter-width*2);
+            }
+         }
+
+         .list-type-3 &{
+            @include breakpoint(desktop){
+               float:left;
+               width: (100%/$nb-col-lg);
+               padding:0 $gutter-width ($gutter-width*2);
+            }
+         }
+      }
+      .inner {
+         >.picture {
+            a{
+               img {
+                  @extend .img-fluid;
+                  padding-top:40px;
+               }
+            }
+         }
+         .picture {
+               a{
+                  img {
+                     @extend .img-fluid;
+                  }
+               }
+            }
+         .content {
+
+            .name{
+               background-color:$color-0;
+               margin: 0;
+               margin-top:-2px;
+               padding:5px 20px;
+               font: 30px $font-special-1;
+               
+               a {
+                  color:white;
+                  text-transform:uppercase;
+               }
+            }
+
+            .description {
+               color:$color-0;
+               padding: 10px 0 0 0;
+               font-size: 15px;
+            }
+
+            .footer {
+               padding:30px 0 40px 0;
+
+               .price {
+                  float:left;
+                  font-weight: bold;
+                  .from {
+                     font-style: italic;
+                  }
+                  .value{  
+                     font-size: 22px;
+                  }
+               }
+
+               .action {
+                  float:right;
+                  font-family: $font-special-1;
+                  font-size: 17px;
+                  text-transform: uppercase;
+               }
+            }
+         }
+      }
+   }
+}
+
+
+/*------------------------------------------------
+FOOTER
+------------------------------------------------*/
+
+.block-footer {
+   background: $color-0;
+   &, a {
+      color: white;
+   }
+   > .inner {
+      text-align: center;
+      font-family: $font-special-2;
+      font-size: 1rem;
+      padding: 1em 0;
+   }
+}
