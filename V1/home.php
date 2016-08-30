@@ -22,7 +22,7 @@ $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
   <link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
   <script type="text/javascript" src="jquery-1.11.3-jquery.min.js"></script>
   <link rel="stylesheet" href="style.css" type="text/css"  />
-  <title>welcome - <?php print($userRow['user_email']); ?></title>
+  <title>Bienvenue - <?php print($userRow['user_email']); ?></title>
 </head>
 
 <body>
@@ -38,7 +38,7 @@ $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
 
     <div class="container">
 
-    	<label class="h5">welcome : <?php print($userRow['user_name']); ?></label>
+    	<label class="h5">Bienvenue : <?php print($userRow['user_name']); ?></label>
       <hr />
       <p class="h2">Page d'accueil</p> 
 

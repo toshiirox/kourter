@@ -112,7 +112,7 @@ if(isset($_POST['btn-signup']))
 					</button>
 				</div>
 				<br />
-				<label>Bienvenue chez Kourter ! <a href="index.php">Connexion</a></label>
+				<label>Inscrit ? <a href="index.php">Connexion</a></label>
 			</form>
 		</div>
 	</div>
