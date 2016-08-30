@@ -37,45 +37,45 @@ if(isset($_POST['btn-login']))
 
     <div class="signin-form">
 
-       <div class="container">
+     <div class="container">
 
 
-         <form class="form-signin" method="post" id="login-form">
+       <form class="form-signin" method="post" id="login-form">
 
-            <h2 class="form-signin-heading">Connexion à l'application.</h2><hr />
+           <h2 class="form-signin-heading">Connexion à l'application</h2><hr />
 
-            <div id="error">
-                <?php
-                if(isset($error))
-                {
-                    ?>
-                    <div class="alert alert-danger">
-                     <i class="glyphicon glyphicon-warning-sign"></i> &nbsp; <?php echo $error; ?> !
-                 </div>
-                 <?php
-             }
-             ?>
-         </div>
+           <div id="error">
+            <?php
+            if(isset($error))
+            {
+                ?>
+                <div class="alert alert-danger">
+                   <i class="glyphicon glyphicon-warning-sign"></i> &nbsp; <?php echo $error; ?> !
+               </div>
+               <?php
+           }
+           ?>
+       </div>
 
-         <div class="form-group">
-            <input type="text" class="form-control" name="txt_uname_email" placeholder="Nom d'utilisateur ou Adresse Email" required />
-            <span id="check-e"></span>
-        </div>
+       <div class="form-group">
+        <input type="text" class="form-control" name="txt_uname_email" placeholder="Nom d'utilisateur ou Adresse Email" required />
+        <span id="check-e"></span>
+    </div>
 
-        <div class="form-group">
-            <input type="password" class="form-control" name="txt_password" placeholder="Mot de passe" />
-        </div>
+    <div class="form-group">
+        <input type="password" class="form-control" name="txt_password" placeholder="Mot de passe" />
+    </div>
 
-        <hr />
+    <hr />
 
-        <div class="form-group">
-            <button type="submit" name="btn-login" class="btn btn-default">
-                <i class="glyphicon glyphicon-log-in"></i> &nbsp; Connexion
-            </button>
-        </div>  
-        <br />
-        <label>Aucun compte ? <a href="sign-up.php">Inscription</a></label>
-    </form>
+    <div class="form-group">
+        <button type="submit" name="btn-login" class="btn btn-default">
+            <i class="glyphicon glyphicon-log-in"></i> &nbsp; Connexion
+        </button>
+    </div>  
+    <br />
+    <label>Aucun compte ? <a href="sign-up.php">Inscription</a></label>
+</form>
 
 </div>
 
