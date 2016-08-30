@@ -29,7 +29,7 @@ $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
 
   <!-- NAV -->
 
-  <?php include ('nav.php'); ?>
+  <?php include ('header.php'); ?>
 
   <div class="clearfix"></div>
 
