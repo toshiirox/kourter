@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mar 30 Août 2016 à 14:06
+-- Généré le :  Mar 30 Août 2016 à 14:27
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -27,13 +27,13 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `agence` (
-  `bank_id` int(11) NOT NULL AUTO_INCREMENT,
-  `bank_adress` varchar(60) DEFAULT NULL,
-  `bank_city` varchar(25) DEFAULT NULL,
-  `bank_cp` int(11) DEFAULT NULL,
-  `id_bank` int(11) DEFAULT NULL,
-  PRIMARY KEY (`bank_id`),
-  KEY `FK_agence_id_bank` (`id_bank`)
+  `agence_id` int(11) NOT NULL AUTO_INCREMENT,
+  `agence_adress` varchar(60) DEFAULT NULL,
+  `agence_city` varchar(25) DEFAULT NULL,
+  `agence_cp` int(11) DEFAULT NULL,
+  `bank_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`agence_id`),
+  KEY `FK_agence_bank_id` (`bank_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -70,10 +70,10 @@ CREATE TABLE IF NOT EXISTS `defini` (
 --
 
 CREATE TABLE IF NOT EXISTS `enseigne` (
-  `id_bank` int(11) NOT NULL AUTO_INCREMENT,
+  `bank_id` int(11) NOT NULL AUTO_INCREMENT,
   `bank_logo` varchar(60) DEFAULT NULL,
   `bank_name` varchar(25) DEFAULT NULL,
-  PRIMARY KEY (`id_bank`)
+  PRIMARY KEY (`bank_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -98,9 +98,9 @@ CREATE TABLE IF NOT EXISTS `gere` (
 CREATE TABLE IF NOT EXISTS `offre` (
   `id_offre` int(11) NOT NULL AUTO_INCREMENT,
   `taux` float DEFAULT NULL,
-  `bank_id` int(11) DEFAULT NULL,
+  `agence_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_offre`),
-  KEY `FK_offre_bank_id` (`bank_id`)
+  KEY `FK_offre_agence_id` (`agence_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -159,7 +159,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 -- Contraintes pour la table `agence`
 --
 ALTER TABLE `agence`
-  ADD CONSTRAINT `FK_agence_id_bank` FOREIGN KEY (`id_bank`) REFERENCES `enseigne` (`id_bank`);
+  ADD CONSTRAINT `FK_agence_bank_id` FOREIGN KEY (`bank_id`) REFERENCES `enseigne` (`bank_id`);
 
 --
 -- Contraintes pour la table `defini`
@@ -179,7 +179,7 @@ ALTER TABLE `gere`
 -- Contraintes pour la table `offre`
 --
 ALTER TABLE `offre`
-  ADD CONSTRAINT `FK_offre_bank_id` FOREIGN KEY (`bank_id`) REFERENCES `agence` (`bank_id`);
+  ADD CONSTRAINT `FK_offre_agence_id` FOREIGN KEY (`agence_id`) REFERENCES `agence` (`agence_id`);
 
 --
 -- Contraintes pour la table `project`
