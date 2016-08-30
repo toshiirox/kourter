@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mar 30 Août 2016 à 14:27
+-- Généré le :  Mar 30 Août 2016 à 16:15
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -44,9 +44,7 @@ CREATE TABLE IF NOT EXISTS `agence` (
 
 CREATE TABLE IF NOT EXISTS `caracteristiques` (
   `id_caracteristique` int(11) NOT NULL AUTO_INCREMENT,
-  `budget` int(11) DEFAULT NULL,
-  `duree` int(11) DEFAULT NULL,
-  `type_project` varchar(25) DEFAULT NULL,
+  `libelle` varchar(60) DEFAULT NULL,
   PRIMARY KEY (`id_caracteristique`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
@@ -106,22 +104,18 @@ CREATE TABLE IF NOT EXISTS `offre` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `project`
+-- Structure de la table `projet_client`
 --
 
-CREATE TABLE IF NOT EXISTS `project` (
+CREATE TABLE IF NOT EXISTS `projet_client` (
   `project_id` int(11) NOT NULL AUTO_INCREMENT,
-  `apport_perso` int(11) DEFAULT NULL,
   `nom_client` varchar(25) DEFAULT NULL,
   `prenom_client` varchar(25) DEFAULT NULL,
   `mail_client` varchar(60) DEFAULT NULL,
-  `age` int(11) DEFAULT NULL,
-  `revenu_client` int(11) DEFAULT NULL,
-  `taux_endettement` float DEFAULT NULL,
-  `situation` varchar(25) DEFAULT NULL,
+  `date_naissance` date DEFAULT NULL,
   `user_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`project_id`),
-  KEY `FK_project_user_id` (`user_id`)
+  KEY `FK_projet_client_user_id` (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -131,6 +125,8 @@ CREATE TABLE IF NOT EXISTS `project` (
 --
 
 CREATE TABLE IF NOT EXISTS `recquiert` (
+  `valeur` varchar(25) DEFAULT NULL,
+  `obligatoire` tinyint(1) DEFAULT NULL,
   `id_offre` int(11) NOT NULL,
   `id_caracteristique` int(11) NOT NULL,
   PRIMARY KEY (`id_offre`,`id_caracteristique`),
@@ -165,7 +161,7 @@ ALTER TABLE `agence`
 -- Contraintes pour la table `defini`
 --
 ALTER TABLE `defini`
-  ADD CONSTRAINT `FK_defini_project_id` FOREIGN KEY (`project_id`) REFERENCES `project` (`project_id`),
+  ADD CONSTRAINT `FK_defini_project_id` FOREIGN KEY (`project_id`) REFERENCES `projet_client` (`project_id`),
   ADD CONSTRAINT `FK_defini_id_caracteristique` FOREIGN KEY (`id_caracteristique`) REFERENCES `caracteristiques` (`id_caracteristique`);
 
 --
@@ -182,10 +178,10 @@ ALTER TABLE `offre`
   ADD CONSTRAINT `FK_offre_agence_id` FOREIGN KEY (`agence_id`) REFERENCES `agence` (`agence_id`);
 
 --
--- Contraintes pour la table `project`
+-- Contraintes pour la table `projet_client`
 --
-ALTER TABLE `project`
-  ADD CONSTRAINT `FK_project_user_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`);
+ALTER TABLE `projet_client`
+  ADD CONSTRAINT `FK_projet_client_user_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`);
 
 --
 -- Contraintes pour la table `recquiert`
