@@ -15,19 +15,19 @@ if(isset($_POST['btn-signup']))
 	$upass = strip_tags($_POST['txt_upass']);	
 	
 	if($uname=="")	{
-		$error[] = "provide username !";	
+		$error[] = "Inscrivez le nom d'utilsateur !";	
 	}
 	else if($umail=="")	{
-		$error[] = "provide email id !";	
+		$error[] = "Inscrivez l'adresse email !";	
 	}
 	else if(!filter_var($umail, FILTER_VALIDATE_EMAIL))	{
-		$error[] = 'Please enter a valid email address !';
+		$error[] = 'Entrez une adresse email valide !';
 	}
 	else if($upass=="")	{
-		$error[] = "provide password !";
+		$error[] = "Inscrivez le mot de passe !";
 	}
 	else if(strlen($upass) < 6){
-		$error[] = "Password must be atleast 6 characters";	
+		$error[] = "Le mot de passe doit faire au moins 6 charactères.";	
 	}
 	else
 	{
@@ -38,10 +38,10 @@ if(isset($_POST['btn-signup']))
 			$row=$stmt->fetch(PDO::FETCH_ASSOC);
 			
 			if($row['user_name']==$uname) {
-				$error[] = "sorry username already taken !";
+				$error[] = "Nom d'utilisateur déjà pris !";
 			}
 			else if($row['user_email']==$umail) {
-				$error[] = "sorry email id already taken !";
+				$error[] = "Email déjà utilisé !";
 			}
 			else
 			{
@@ -74,7 +74,7 @@ if(isset($_POST['btn-signup']))
 		<div class="container">
 			
 			<form method="post" class="form-signin">
-				<h2 class="form-signin-heading">Sign up.</h2><hr />
+				<h2 class="form-signin-heading">Inscription</h2><hr />
 				<?php
 				if(isset($error))
 				{
@@ -91,28 +91,28 @@ if(isset($_POST['btn-signup']))
 				{
 					?>
 					<div class="alert alert-info">
-						<i class="glyphicon glyphicon-log-in"></i> &nbsp; Successfully registered <a href='index.php'>login</a> here
+						<i class="glyphicon glyphicon-log-in"></i> &nbsp; Inscription réussie <a href='index.php'>connectez-vous</a>
 					</div>
 					<?php
 				}
 				?>
 				<div class="form-group">
-					<input type="text" class="form-control" name="txt_uname" placeholder="Enter Username" value="<?php if(isset($error)){echo $uname;}?>" />
+					<input type="text" class="form-control" name="txt_uname" placeholder="Nom d'utilisateur" value="<?php if(isset($error)){echo $uname;}?>" />
 				</div>
 				<div class="form-group">
-					<input type="text" class="form-control" name="txt_umail" placeholder="Enter E-Mail ID" value="<?php if(isset($error)){echo $umail;}?>" />
+					<input type="text" class="form-control" name="txt_umail" placeholder="E-Mail" value="<?php if(isset($error)){echo $umail;}?>" />
 				</div>
 				<div class="form-group">
-					<input type="password" class="form-control" name="txt_upass" placeholder="Enter Password" />
+					<input type="password" class="form-control" name="txt_upass" placeholder="Entrer Mot de Passe" />
 				</div>
 				<div class="clearfix"></div><hr />
 				<div class="form-group">
 					<button type="submit" class="btn btn-primary" name="btn-signup">
-						<i class="glyphicon glyphicon-open-file"></i>&nbsp;SIGN UP
+						<i class="glyphicon glyphicon-open-file"></i>&nbsp;Inscription
 					</button>
 				</div>
 				<br />
-				<label>have an account ! <a href="index.php">Sign In</a></label>
+				<label>Bienvenue chez Kourter ! <a href="index.php">Connexion</a></label>
 			</form>
 		</div>
 	</div>
