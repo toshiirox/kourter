@@ -15,7 +15,7 @@
 
 <div class="container">
 
-	<form class="offre_form" method="post">
+	<form class="template_form" method="post">
 
 		
 		<h1>Créer une Offre</h1>
