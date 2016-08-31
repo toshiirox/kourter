@@ -1,7 +1,5 @@
 <?php 
-
 require_once("dbconfig.php");
-
 
 class projet {
 	public $id_projet;
@@ -27,8 +25,6 @@ class projet {
 		$stmt->bindValue(":duree_emprunt", $duree_emprunt);
 		$stmt->bindValue(":type_projet", $type_projet);
 		$stmt->bindValue(":user_id", $user_id);
-
-
 
 		$stmt->execute();
 		$bank=$stmt->fetchObject();
