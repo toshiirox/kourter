@@ -21,21 +21,13 @@
 
 
 			<h1>Créer une Offre</h1>
-			<br />
 			<h2>Informations Client</h2>
-			<br />
 			<label for="banque">Nom</label>
 			<input type="text" name="Banque" required="required" />
-			<br/>
-			<br />
 			<label for="agence">Prénom</label>
 			<input type="text" name="Agence" required="required" />
-			<br />
-			<br />
 			<label for="agence">Date de Naissance</label>
 			<input type="date" name="Agence" required="required" />
-			<br />
-			<br />
 			<label for="agence">Situation Familiale</label>
 			<div class="selectform1">
 				<select name="belist" form="typeform" required="required">
@@ -46,7 +38,6 @@
 					<option value="concubinage">Concubinage</option>
 				</select>
 			</div>
-			<br />
 			<label for="enfants">Enfants</label>
 			<div class="selectform1">
 				<select name="childlist" form="typeform" id="childlist">
@@ -57,17 +48,11 @@
 
 				</select>
 			</div>
-			<br />
 			<label for="adress">Adresse</label>
 			<input type="text" name="Adresse" required="required" />
-			<br />
 			<label for=codepostal>Code postal</label>
 			<input id=codepostal name=codepostal type=text maxlength="5" />
-			<br />
-			<br />
-			<br />
 			<h2>Détails de l'Offre</h2>
-			<br />
 			<label for="tauxinteret">Taux d'Intérêts  %</label>
 			<input id="tauxint" type="number" step="0.01" value="1.00" max="3.00" min="1.00" />
 			
@@ -75,28 +60,24 @@
 			<input id="yendettement" type="number" step="5" value="" min="0" max="30" placeholder="max: 30ans" />
 			
 
-			<br />
-			<label for="typeprojet">Type de Projet</label><br />
-			<div class="selectform1">
-				<select name="typelist" form="typeform">
-					<option value="immobilier">Crédit Immobilier</option>
-					<option value="auto">Crédit Auto</option>
-					<option value="consommation">Crédit à la Consommation</option>
-					<option value="etudiant">Crédit Étudiant</option>
+			<label for="typeprojet">Type de Projet</la
+				<div class="selectform1">
+					<select name="typelist" form="typeform">
+						<option value="immobilier">Crédit Immobilier</option>
+						<option value="auto">Crédit Auto</option>
+						<option value="consommation">Crédit à la Consommation</option>
+						<option value="etudiant">Crédit Étudiant</option>
 
-				</select>
-			</div>
-			<br />
-			<br />
+					</select>
+				</div>
 
 
-			<button type="submit" class="btn-valider btn btn-block ">Valider</button>
-			<br />
+				<button type="submit" class="btn-valider btn btn-block ">Valider</button>
 
-			<div class="annuler">ou <a href="../V1/home.php">Annuler</a></div>
-		</form>
+				<div class="annuler">ou <a href="../V1/home.php">Annuler</a></div>
+			</form>
+		</div>
 	</div>
-</div>
 </div>
 </div>
 </body>
