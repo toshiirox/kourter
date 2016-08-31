@@ -188,9 +188,9 @@ input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgb
     transition: box-shadow .5s ease;
 }
 .selectform1 select{
-    width: 100%;
-    height: 100%;
-    border: 0;
+   width: 100%;
+   height: 100%;
+   border: 0;
    color: #333333;
    background: transparent;
    font-size: 17px;
