@@ -36,9 +36,9 @@ $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-nav-left">
-        <li><a href="#">Projets</a></li>
-        <li><a href="#">Offres</a></li>
-        <li><a href="#">Comparatif</a></li>
+        <li><a href="projet.php">Projets</a></li>
+        <li><a href="offre.php">Offres</a></li>
+        <li><a href="resultat.php">Comparatif</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
 
