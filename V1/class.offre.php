@@ -7,11 +7,14 @@ class offre_banque {
 	public $taux_offre;
 	public $montant_mini;
 	public $type_offre;
-	public $user_id;	
+	public $user_id;
+
 
 	public function __construct($id_offre,$nom_agence,$taux_offre,$montant_mini,$type_offre,$user_id){
+		$database = new Database();
+		$db = $database->dbConnection();
 		$this->conn = $db;
-		$stmt=$connexion->prepare("INSERT INTO kourter.offre_banque (id_offre, nom_agence, taux_offre, montant_mini, type_offre, user_id) VALUES (NULL, :nom_agence, :taux_offre, :montant_mini, :type_offre, :user_id)");
+		$stmt=$this->conn->prepare("INSERT INTO kourter.offre_banque (id_offre, nom_agence, taux_offre, montant_mini, type_offre, user_id) VALUES (NULL, :nom_agence, :taux_offre, :montant_mini, :type_offre, :user_id)");
 		$stmt->bindValue(':nom_agence',$nom_agence);
 		$stmt->bindValue(':taux_offre',$taux_offre);
 		$stmt->bindValue(':montant_mini',$montant_mini);
@@ -32,17 +35,17 @@ class offre_banque {
 		return $req;
 	}
 
-	public static function getOffreByType($type){
+	/*public static function getOffreByType($type){
 		$this->conn = $db;
 		$req=$this->conn->query("SELECT * FROM offre_banque WHERE type_offre=:type")
 		$req->bindValue(':type',$type);
 		$req->setFetchMode(PDO::FETCH_OBJ);
 		return $req;
 	}
-
+*/
 	/*public static function getTauxById($id_offre){
 		global $connexion;
-		$req=$connexion->prepare("SELECT taux_offre From offre_banque WHERE ID=:id");
+		$req=$this->conn->prepare("SELECT taux_offre From offre_banque WHERE ID=:id");
 		$req->bindValue(":id",$id_offre);
 		$Taux1=$req->fetchObject();
 		return $Taux1;
