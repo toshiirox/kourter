@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Kourter : Connexion</title>
+    <title>Kourter : Créer une offre</title>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
     <link rel="stylesheet" href="style.css" type="text/css"  />
@@ -61,8 +61,6 @@
 
 
 			<button type="submit" class="btn-valider btn btn-block ">Valider</button>
-			
-			<button type="submit" class="btn-valider-creer btn  btn-block ">Valider & Créer une nouvelle offre</button>
 			<br />
 
 			<div class="annuler">ou <a href="../V1/home.php">Annuler</a></div>

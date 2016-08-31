@@ -25,17 +25,17 @@ $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
 </head>
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
-    <div class="navbar-header">
+    <div class="navbar-header navbar-perso">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
         <span class="sr-only"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../V1/home.php">Kourter</a>
+      <a href="../V1/home.php"></a><img class="logo" src="../V1/img/kourter-logo.png" alt="logo kourter" />
     </div>
     <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav navbar-nav-left">
         <li><a href="#">Projets</a></li>
         <li><a href="#">Offres</a></li>
         <li><a href="#">Comparatif</a></li>

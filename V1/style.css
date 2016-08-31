@@ -1,9 +1,47 @@
 @charset "utf-8";
 /* CSS Document */
 
+
+
+
+
+
+
+
 body{
 	background:#f1f9f9;
+
 }
+
+/*-----------------NAVBAR------------------*/
+.logo{
+height: 35px;
+position: relative;
+padding: 0 50px 0 0;
+
+}
+
+.navbar-perso{
+    height: 50px;
+    margin: auto 0;
+}
+.navbar{
+    padding: 17px 0;
+}
+.navbar-nav-left {
+    font-family: 'Lato', 'Open Sans', Helvetica, Arial, Tahoma;
+    font-size: 18px; 
+    font-weight: 400px;
+}
+
+.navbar-nav-left>a{
+
+}
+/*----------END NAVBAR----------*/
+
+
+
+
 
 .form-signin {
     max-width: 500px;
@@ -54,13 +92,17 @@ h1{
 	font-family:Verdana, Geneva, sans-serif;
 }
 
+
+
+/*-------------------Formulaires----------------------*/
 .offre_form { 
     position: relative;
     margin: 200px auto;    
+    /*height:1200px;
+    background-color: #FFF;*/
     width:600px;
-    height:1200px;
-    background-color: #333333;
     padding: 25px 40px 25px 40px;
+
 }
 
 input { 
@@ -72,7 +114,7 @@ input {
     padding: 10px;
     font-size: 13px;
     color: #333;
-    border: 1px solid rgba(0,0,0,0.3);
+    border: 1px solid rgba(0,0,0,0.4);
     border-radius: 4px;
     box-shadow: inset 0 -5px 45px rgba(100,100,100,0.1), 0 1px 1px rgba(255,255,255,0.2);
     -webkit-transition: box-shadow .5s ease;
@@ -80,6 +122,10 @@ input {
     -o-transition: box-shadow .5s ease;
     -ms-transition: box-shadow .5s ease;
     transition: box-shadow .5s ease;
+    font-family: 'Lato',Helvetica,Arial,Tahoma;
+    font-size: 17px;
+    font-weight: 600;
+    color: #333;
 
 }
 ::-webkit-input-placeholder {
@@ -170,7 +216,7 @@ input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgb
 form>h1{
     font-family: 'Lato', Arial,Tahoma;
     font-weight: bold;
-    color: #fff;
+    color: #333;
     font-size: 60px;
    
 
@@ -188,9 +234,16 @@ label{
     text-transform: uppercase;
     font-size: 15px;
     font-weight: 400;
-    color: #fff;
+    color: #333;
 }
 
+#tauxint{
+    font-family: 'Lato', Helvetica, Arial, Tahoma;
+    font-size: 17px;
+    font-weight: 600;
+
+}
+/*------------END Formulaires------------*/
 
 /*---------------Boutons Formumaires------------------*/
 .btn-valider{
@@ -208,22 +261,9 @@ background-color: #0075ff;
 }
 .btn-valider:hover {
     background-color: #044f99;
-    color: #333;
+    color: #fff;
 }
-.btn-valider-creer{
-width: 60%;
-margin: 0 auto;
-font-family: 'Lato',Arial,Helvetica,Tahoma;
-font-size: 12px;
-text-align:center;
-text-transform: uppercase;
-color:#fff;
-background-color: #07aa64;
-}
-.btn-valider-creer:hover {
-    background-color: #00894b;
-    color: #333;
-}
+
 .annuler{
     color:#fff;
     text-align: center; 
@@ -233,3 +273,5 @@ background-color: #07aa64;
     text-decoration: none;
 
 }
+/*------------END Boutons Formulaires------------*/
+
