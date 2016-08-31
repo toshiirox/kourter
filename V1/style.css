@@ -194,15 +194,42 @@ label{
 
 /*---------------Boutons Formumaires------------------*/
 .btn-valider{
-width: 50%;
-font-family: 'Lato',Arial,Helvetica,Tahoma;
-text-transform: uppercase;
-font-size: 30px;
-}
+width: 60%;
+padding: 15px 30px;
+margin:0 auto;
 
-.btn-valider-creer{
-width: 50%;
 font-family: 'Lato',Arial,Helvetica,Tahoma;
+font-weight: 600;
+font-size: 20px;
 text-transform: uppercase;
-font-size: 30px;
+text-align:center;
+color: #fff;
+background-color: #0075ff;
+}
+.btn-valider:hover {
+    background-color: #044f99;
+    color: #333;
+}
+.btn-valider-creer{
+width: 60%;
+margin: 0 auto;
+font-family: 'Lato',Arial,Helvetica,Tahoma;
+font-size: 12px;
+text-align:center;
+text-transform: uppercase;
+color:#fff;
+background-color: #07aa64;
+}
+.btn-valider-creer:hover {
+    background-color: #00894b;
+    color: #333;
+}
+.annuler{
+    color:#fff;
+    text-align: center; 
+}
+.annuler a{
+    color: #0075ff;
+    text-decoration: none;
+
 }

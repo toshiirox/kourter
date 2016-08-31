@@ -57,11 +57,14 @@
 			</select>
 			</div>
 			<br />
-
-
-			<button type="submit" class="btn-valider btn btn-pimary btn-block ">Valider</button>
 			<br />
-			<button type="submit" class="btn-valider-creer btn btn-primary btn-block ">Valider & Créer une nouvelle offre</button>
+
+
+			<button type="submit" class="btn-valider btn btn-block ">Valider</button>
+			
+			<button type="submit" class="btn-valider-creer btn  btn-block ">Valider & Créer une nouvelle offre</button>
+			<br />
+
 			<div class="annuler">ou <a href="../V1/home.php">Annuler</a></div>
 		</form>
 	</div>
