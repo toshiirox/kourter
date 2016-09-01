@@ -32,7 +32,7 @@ $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="../V1/home.php"></a><img class="logo" src="../V1/img/kourter-logo.png" alt="logo kourter" />
+      <a href="../V1/index.php"><img class="logo" src="../V1/img/kourter-logo.png" alt="logo kourter" /></a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-nav-left">
