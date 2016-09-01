@@ -8,7 +8,7 @@
 
 	echo '<div class="container">';
 	echo '<div class="col-md-offset-2 col-md-8 ">';
-	echo '<table class="table table-bordered">';
+	echo '<table class="table table-bordered table-result">';
 	echo '<tr><th>Agence</th><th>Taux</th><th>Montant Minimal</th><th>Type</th></tr>';
 	while ($ligne=$listOffre->fetch()) {
 		echo "<tr>";
