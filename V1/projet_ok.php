@@ -10,9 +10,14 @@ $duree_emprunt=$_POST["duree_emprunt"];
 $type_offre=$_POST["type_offre"];
 $user_id=$userRow["user_id"];
 $projet=new projet (NULL,$budget_projet,$nom_client,$prenom_client,$situation_client,$revenu_client,$duree_emprunt,$type_offre,$user_id);
-?>
 
 
-test on fera du front mamène
+echo '<div class="container">';
+echo '<div class="panel panel-default">';
+echo '<div class="panel-heading">Projet : '.$nom_client.'</div>';
+echo '<div class="panel-body">Projet : '.$nom_client.'</div>';
+echo '<div class="panel-body">Projet : '.$nom_client.'</div>';
 
-<?php include ('footer.php'); ?>
+echo '</div></div>';
+
+include ('footer.php'); ?>
