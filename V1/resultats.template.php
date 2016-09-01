@@ -17,60 +17,31 @@
 
 	<div class="container">
 
-		<h1>Résultats</h1>
-		<br />
+		<!--TABLEAUX RÉSULATS-->
 
-		<div class="plans">
-
-
-
-			<div class="plan-wrap">
-				<div class="banque">
-
-				<h3><span class="badge badge-pro">Société Générale</span></h3>
-
-					<div class="pricing">
-
-						<div class="pricing-group">
-
-							<div class="pricing-half pricing-top">
-								<span class="dollar-sign">200 €</span>
-								<span class="per">/ MOIS</span>
-							</div>
-
-							<div class="pricing-half pricing-bottom">
-								<span class="dollar-sign">$</span>
-								<span class="dollar-amount">75</span>
-								<span class="per">/ Year</span>
-								<span class="save">Save $33!</span>
-							</div>
-
-						</div>
-
-						<ul class="feature-list">
-							<li>Unlimited Private Pens</li>
-							<li>Live View</li>
-							<li>Asset Hosting <span class="feature-amount">1 GB</span></li>
-							<li>Collab Mode <span class="feature-amount">2 people</span></li>
-							<li>Professor Mode <span class="feature-amount">10 students</span></li>
-							<li><span class="feature-amount">100</span> Send-to-Phone Messages</li>
-							<li>Unlimited Embed Themes w/ Custom CSS</li>
-							<li>Custom CSS on your Profile, Blog, and Blog posts</li>
-						</ul>
-
-
-						<div class="button-wrap">
-							<a href="/signup/pro" class="button button-fullwidth big green">
-								Sign Up
-							</a>
-						</div>
-
-					</div>
-
-				</div>
-			</div>
-			
+		<div class="col-md-offset-2 col-md-8 ">
+			<table class="table table-bordered">
+			<tr>
+				<th>Nom</th>
+				<th>Budget</th>
+				<th> Type de Projet</th>
+			</tr>
+				<tr>
+					<td>Prénom/Nom Client</td>
+					<td>Budget</td>
+					<td>Type de projet</td>
+				</tr>
+			</table>
 		</div>
+		
 
-	</body>
-	</html>
+
+
+
+		<!-- End Tableau-->
+
+		
+	</div>
+
+</body>
+</html>
