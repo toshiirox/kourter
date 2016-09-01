@@ -1,12 +1,12 @@
   <?php include ('header.php'); ?>
   
   <div class="container">
-
+    <legend><h1>Ajout de Projet</h1></legend>
     <form class="form-horizontal" method="POST" action="projet_ok.php">
       <fieldset>
 
         <!-- Form Name --> 
-        <legend><h1>Ajout de Projet</h1></legend>
+        
 
 
         <!-- Text input-->
