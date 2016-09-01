@@ -5,7 +5,7 @@
     <form class="form-horizontal" method="POST" action="projet_ok.php">
       <fieldset>
 
-        <!-- Form Name -->
+        <!-- Form Name --> 
         <legend><h1>Ajout de Projet</h1></legend>
 
 

@@ -14,7 +14,7 @@
   					<input id="nom_agence" name="nom_agence" type="text" placeholder="Ex : Société Générale" class="form-control input-md" required="">
 
   				</div>
-  			</div>
+  			</div> 
 
   			<!-- Text input-->
   			<div class="form-group">
