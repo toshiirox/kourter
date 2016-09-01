@@ -51,6 +51,14 @@ class projet {
 		$req->setFetchMode(PDO::FETCH_OBJ);
 		return $req;
 	}
+	public static function getProjetbyID($id_projet){
+		global $connexion;
+		$sql="SELECT * FROM projet WHERE id_projet=".$id_projet;
+		$req=$connexion->query($sql);
+		// $req->bindValue(':id_projet',$id_projet);
+		$req->setFetchMode(PDO::FETCH_OBJ);
+		return $req;
+	}
 
 
 

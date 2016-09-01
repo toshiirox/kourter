@@ -1,13 +1,15 @@
-<?php 
-include ('header.php');
-require_once ('class.projet.php');
+<body>
+	
+	<?php 
+	include ('header.php');
+	require_once ('class.projet.php');
 
-$listProjet=projet::getAllfromProjet();
+	$listProjet=projet::getAllfromProjet();
 
-while ($ligne=$listProjet->fetch()) {
-	echo $ligne->nom_client;
-}
+	while ($ligne=$listProjet->fetch()) {
+		echo $ligne->nom_client;
+	}
 
-?>
+	?>
 </body>
 </html>

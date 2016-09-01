@@ -1,7 +1,7 @@
 <?php 
 require_once("dbconfig.php");
 
-class offre_banque {
+class offre {
 	public $id_offre;
 	public $nom_agence;
 	public $taux_offre;
@@ -27,7 +27,7 @@ class offre_banque {
 		$this->user_id=$user_id;
 	}
 
-	public static function getAllfromBanks(){
+	public static function getAllfromOffre(){
 		global $connexion;
 		$req=$connexion->query("SELECT * FROM offre_banque");
 		$req->setFetchMode(PDO::FETCH_OBJ);
