@@ -12,7 +12,7 @@
 
     <div class="container">
 
-      <div class="row"><label class="h5 bienvenue">Bienvenue : <?php print($userRow['user_name']); ?></label></div>
+      <!-- <div class="row"><label class="h5 bienvenue">Bienvenue : <?php print($userRow['user_name']); ?></label></div> -->
 
 
       <div class="row text-center marge-20">
@@ -61,7 +61,7 @@
           </div>
         </div>
 
-       <div class=" col-md-3">
+        <div class=" col-md-3">
           <div class=" pastille-b">
             <a href="../V1/view.offre.php">
               <div class="icone">
@@ -74,7 +74,7 @@
             </a>
           </div>
         </div>
-     </div>
+      </div>
 
 
 
