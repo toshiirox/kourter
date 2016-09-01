@@ -39,22 +39,29 @@ class projet {
 
 	public static function getAllfromProjet($id){
 		global $connexion;
-		$req=$connexion->query("SELECT * FROM projet WHERE user_id='.$id.'");
+		$req=$connexion->prepare("SELECT * FROM projet WHERE user_id=:user_id");
+		$req->bindValue(":user_id",$id);
+		$req->execute();
 		$req->setFetchMode(PDO::FETCH_OBJ);
 		return $req;
 	}
 
 	public static function getProjetbyType($type, $id){
 		global $connexion;
-		$req=$connexion->query("SELECT * FROM projet WHERE type_projet=:type AND user_id='.$id'");
+		$req=$connexion->prepare("SELECT * FROM projet WHERE type_projet=:type AND user_id=:user_id");
 		$req->bindValue(':type',$type);
+		$req->bindValue(":user_id",$id);
+		$req->execute();
 		$req->setFetchMode(PDO::FETCH_OBJ);
 		return $req;
 	}
 	public static function getProjetbyID($id_projet,$id){
 		global $connexion;
-		$sql="SELECT * FROM projet WHERE id_projet='".$id_projet."'AND user_id='".$id."'";
-		$req=$connexion->query($sql);
+		$sql="SELECT * FROM projet WHERE id_projet=:id_projet AND user_id=:user_id";
+		$req=$connexion->prepare($sql);
+		$req->bindValue(":id_projet",$id_projet);
+		$req->bindValue(":user_id",$id);
+		$req->execute();
 		// $req->bindValue(':id_projet',$id_projet);
 		$req->setFetchMode(PDO::FETCH_OBJ);
 		return $req;

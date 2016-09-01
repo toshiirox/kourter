@@ -29,15 +29,20 @@ class offre {
 
 	public static function getAllfromOffre($id){
 		global $connexion;
-		$req=$connexion->query("SELECT * FROM offre_banque WHERE user_id='.$id.'");
+		$req=$connexion->prepare("SELECT * FROM offre_banque WHERE user_id=:user_id");
+		$req->bindValue(":user_id",$id);
+		$req->execute();
 		$req->setFetchMode(PDO::FETCH_OBJ);
 		return $req;
 	}
 
 	public static function getOffreByType($type, $id){
 		global $connexion;
-		$sql="SELECT * FROM offre_banque WHERE type_offre='".$type."'AND user_id='.$id.'";
-		$req=$connexion->query($sql);
+		$sql="SELECT * FROM offre_banque WHERE type_offre=:type_offre AND user_id=:user_idr";
+		$req=$connexion->prepare($sql);
+		$req->bindValue(":type_offre",$type);
+		$req->bindValue(":user_id",$id);
+		$req->execute();
 		$req->setFetchMode(PDO::FETCH_OBJ);
 		return $req;
 	}

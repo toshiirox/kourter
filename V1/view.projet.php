@@ -7,7 +7,6 @@ require_once ('class.projet.php');
 
 	<?php
 	$listProjet=projet::getAllfromProjet($user_id);
-
 	echo '<div class="container">';
 	echo '<div class="col-md-offset-2 col-md-8 ">';
 	echo '<table class="table table-bordered table-result">';
