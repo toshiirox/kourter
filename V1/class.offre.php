@@ -36,12 +36,13 @@ class offre {
 		return $req;
 	}
 
-	public static function getOffreByType($type, $id){
+	public static function getOffreByType($type, $id, $montant){
 		global $connexion;
-		$sql="SELECT * FROM offre_banque WHERE type_offre=:type_offre AND user_id=:user_id";
+		$sql="SELECT * FROM offre_banque WHERE type_offre=:typeProjet AND user_id=:user_id AND montant_mini<=:montant_projet";
 		$req=$connexion->prepare($sql);
-		$req->bindValue(":type_offre",$type);
+		$req->bindValue(":typeProjet",$type);
 		$req->bindValue(":user_id",$id);
+		$req->bindValue(":montant_projet",$montant);
 		$req->execute();
 		$req->setFetchMode(PDO::FETCH_OBJ);
 		return $req;

@@ -38,14 +38,14 @@
 		    //#############LES OFFRES##########
 			//#################################
 
-		$lesOffres=offre::getOffreByType($typeProjet, $user_id);
-		while ($ligne=$lesOffres->fetch()){
-			$id_offre=$ligne->id_offre;
-			$type_offre=$ligne->type_offre;
-			$taux_offre=$ligne->taux_offre;
-			$montant_mini=$ligne->montant_mini;
+		$lesOffres=offre::getOffreByType($typeProjet, $user_id,$budgetProjet);
+		while ($ligne2=$lesOffres->fetch()) {
+			$nom_agence=$ligne2->nom_agence;
+			$id_offre=$ligne2->id_offre;
+			$taux_offre=$ligne2->taux_offre;
+			$montant_mini=$ligne2->montant_mini;
 			$mensualité=$budgetProjet*$taux_offre/$dureeEmprunt/12;
-
+			echo "mensualité :".$mensualité;
 		}
 		
 		?>

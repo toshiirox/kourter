@@ -27,8 +27,8 @@ echo '</div>';
 	<fieldset>
 		<div class="form-group">
 			<div class="col-md-8">
-				<a class="btn btn-success col-xs-3 col-xs-offset-4 " href="view.offres.php" role="button">Offres</a>
-				<a class="btn btn-info col-xs-3 col-xs-offset-2 " href="offres.php" role="button">Nouvelle Offre</a>
+				<a class="btn btn-success col-xs-3 col-xs-offset-4 " href="view.offre.php" role="button">Offres</a>
+				<a class="btn btn-info col-xs-3 col-xs-offset-2 " href="offre.php" role="button">Nouvelle Offre</a>
 			</div>
 		</div>
 
