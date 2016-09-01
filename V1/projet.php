@@ -96,9 +96,9 @@
 
     <!-- Select Basic -->
     <div class="form-group">
-      <label class="col-md-4 control-label" for="type_offre">Type du projet</label>
+      <label class="col-md-4 control-label" for="type_projet">Type du projet</label>
       <div class="col-md-4">
-        <select id="type_offre" name="type_offre" class="form-control">
+        <select id="type_projet" name="type_projet" class="form-control">
           <option value="Immobilier">Immobilier</option>
           <option value="Automobile">Automobile</option>
           <option value="Etudiant">Étudiant</option>
