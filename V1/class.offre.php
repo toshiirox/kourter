@@ -11,10 +11,8 @@ class offre_banque {
 
 
 	public function __construct($id_offre,$nom_agence,$taux_offre,$montant_mini,$type_offre,$user_id){
-		$database = new Database();
-		$db = $database->dbConnection();
-		$this->conn = $db;
-		$stmt=$this->conn->prepare("INSERT INTO kourter.offre_banque (id_offre, nom_agence, taux_offre, montant_mini, type_offre, user_id) VALUES (NULL, :nom_agence, :taux_offre, :montant_mini, :type_offre, :user_id)");
+		global $connexion;
+		$stmt=$connexion->prepare("INSERT INTO kourter.offre_banque (id_offre, nom_agence, taux_offre, montant_mini, type_offre, user_id) VALUES (NULL, :nom_agence, :taux_offre, :montant_mini, :type_offre, :user_id)");
 		$stmt->bindValue(':nom_agence',$nom_agence);
 		$stmt->bindValue(':taux_offre',$taux_offre);
 		$stmt->bindValue(':montant_mini',$montant_mini);
@@ -29,8 +27,8 @@ class offre_banque {
 	}
 
 	public static function getAllfromBanks(){
-		$this->conn = $db;
-		$req=$this->conn->query("SELECT * FROM offre_banque");
+		global $connexion;
+		$req=$connexion->query("SELECT * FROM offre_banque");
 		$req->setFetchMode(PDO::FETCH_OBJ);
 		return $req;
 	}

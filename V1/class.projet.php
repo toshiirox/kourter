@@ -14,10 +14,8 @@ class projet {
 	
 	
 	public function __construct($id_projet,$budget_projet,$nom_client,$prenom_client,$situation_client,$revenu_client,$duree_emprunt,$type_projet,$user_id){
-		$database = new Database();
-		$db = $database->dbConnection();
-		$this->conn = $db;
-		$stmt=$this->conn->prepare("INSERT INTO kourter.projet (id_projet, budget_projet, nom_client, prenom_client, situation_client, revenu_client, duree_emprunt, type_projet, user_id) VALUES (NULL, :budget_projet, :nom_client, :prenom_client, :situation_client, :revenu_client, :duree_emprunt, :type_projet, :user_id)");
+		global $connexion;
+		$stmt=$connexion->prepare("INSERT INTO kourter.projet (id_projet, budget_projet, nom_client, prenom_client, situation_client, revenu_client, duree_emprunt, type_projet, user_id) VALUES (NULL, :budget_projet, :nom_client, :prenom_client, :situation_client, :revenu_client, :duree_emprunt, :type_projet, :user_id)");
 		$stmt->bindValue(":budget_projet", $budget_projet);
 		$stmt->bindValue(":nom_client", $nom_client);
 		$stmt->bindValue(":prenom_client", $prenom_client);
@@ -40,15 +38,15 @@ class projet {
 	}
 
 	public static function getAllfromProjet(){
-		$this->conn =$db;
-		$req=$this->conn->query("SELECT * FROM projet;");
+		global $connexion;
+		$req=$connexion->query("SELECT * FROM projet");
 		$req->setFetchMode(PDO::FETCH_OBJ);
 		return $req;
 	}
 
 	public static function getProjetbyType($type){
-		$this->conn =$db;
-		$req=$this->conn->query("SELECT * FROM projet WHERE type_projet=:type;");
+		global $connexion;
+		$req=$connexion->query("SELECT * FROM projet WHERE type_projet=:type");
 		$req->bindValue(':type',$type);
 		$req->setFetchMode(PDO::FETCH_OBJ);
 		return $req;

@@ -1,27 +1,16 @@
-<?php
-class Database
-{   
-    private $host = "localhost";
-    private $db_name = "kourter";
-    private $username = "root";
-    private $password = "";
-    public $conn;
-    
-    public function dbConnection()
-    {
+<?php 
+$param_hote='localhost';
+$param_port='3306';
+$param_nom_bd='kourter';
+$param_utilisateur='root';
+$param_mot_passe="";
 
-     $this->conn = null;    
-     try
-     {
-        $this->conn = new PDO("mysql:host=" . $this->host . ";dbname=" . $this->db_name, $this->username, $this->password);
-        $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);	
-    }
-    catch(PDOException $exception)
-    {
-        echo "Connection error: " . $exception->getMessage();
-    }
-    
-    return $this->conn;
-}
+$connectionStr='mysql:host='.$param_hote.';dbname='.$param_nom_bd.';charset=UTF8';
+try {
+    $connexion=new PDO($connectionStr,$param_utilisateur,$param_mot_passe);
+    $connexion->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+} catch (Exception $e) {
+    echo "Erreur: ".$e->getMessage().'<br>';
+    echo "N°: ".$e->getCode();
 }
 ?>
