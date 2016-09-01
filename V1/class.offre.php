@@ -34,14 +34,16 @@ class offre {
 		return $req;
 	}
 
-	/*public static function getOffreByType($type){
+	public static function getOffreByType($type){
 		global $connexion;
-		$req=$connexion->query("SELECT * FROM offre_banque WHERE type_offre=:type")
-		$req->bindValue(':type',$type);
+		$sql="SELECT * FROM offre_banque WHERE type_offre='".$type."'";
+		//$sql="SELECT * FROM offre_banque WHERE type_offre=".$type;
+		$req=$connexion->query($sql);
+		// $req->bindValue(':type',$type);
 		$req->setFetchMode(PDO::FETCH_OBJ);
 		return $req;
 	}
-*/
+
 	/*public static function getTauxById($id_offre){
 		global $connexion;
 		$req=$connexion->prepare("SELECT taux_offre From offre_banque WHERE ID=:id");

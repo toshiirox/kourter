@@ -5,8 +5,13 @@
 	require_once ('class.projet.php');
 	require_once ('class.offre.php');
 	// $id_projet=$_POST['id_projet'];
-	$test=1;
-	$leProjet=projet::getProjetbyID($test);
+	$id_projet=1;
+
+			//#################################
+		    //############LES PROJETS##########
+			//#################################
+
+	$leProjet=projet::getProjetbyID($id_projet);
 	echo '<div class="container">';
 	echo '<div class="col-md-offset-2 col-md-8">';
 	echo '<table class="table table-bordered">';
@@ -24,7 +29,15 @@
 		$typeProjet=$ligne->type_projet;
 	}
 	echo '</table></div></div>';
+
+			//#################################
+		    //#############LES OFFRES##########
+			//#################################
+
+	$lesOffres=offre::getOffreByType($typeProjet);
 	while ($ligne=$lesOffres->fetch()){
+		echo $ligne->id_offre;
+		echo $ligne->type_offre;
 
 	}
 	
