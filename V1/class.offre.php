@@ -34,8 +34,8 @@ class offre_banque {
 	}
 
 	/*public static function getOffreByType($type){
-		$this->conn = $db;
-		$req=$this->conn->query("SELECT * FROM offre_banque WHERE type_offre=:type")
+		global $connexion;
+		$req=$connexion->query("SELECT * FROM offre_banque WHERE type_offre=:type")
 		$req->bindValue(':type',$type);
 		$req->setFetchMode(PDO::FETCH_OBJ);
 		return $req;
@@ -43,7 +43,7 @@ class offre_banque {
 */
 	/*public static function getTauxById($id_offre){
 		global $connexion;
-		$req=$this->conn->prepare("SELECT taux_offre From offre_banque WHERE ID=:id");
+		$req=$connexion->prepare("SELECT taux_offre From offre_banque WHERE ID=:id");
 		$req->bindValue(":id",$id_offre);
 		$Taux1=$req->fetchObject();
 		return $Taux1;
