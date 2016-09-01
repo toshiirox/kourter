@@ -4,8 +4,7 @@
 	include ('header.php');
 	require_once ('class.projet.php');
 	require_once ('class.offre.php');
-	// $id_projet=$_POST['id_projet'];
-	$id_projet=1;
+	$id_projet=$_GET['id_projet'];
 
 			//#################################
 		    //############LES PROJETS##########
