@@ -38,6 +38,47 @@
 
 
 
+/*-----------HOME-----------*/
+.pastille{
+  background-color: #0075ff;
+  text-align: center;
+  color: #fff ;
+  padding : 20px 0;
+  
+}
+
+.pastille:hover{
+  background-color: #0058bf;
+}
+
+.pastille-b{
+  background-color: #18157c;
+  text-align: center;
+  color: #fff;
+  padding : 20px 0;
+}
+.pastille-b:hover{
+  background-color: #09083a;
+}
+
+.pastille a, .pastille-b a {
+  text-decoration: none;
+  font-family: 'Lato','Open Sans', 'Helvetica';
+  font-size: 22px;
+  color: #fff;
+}
+
+.icone{
+  font-size: 3em;
+  padding: 20px 0;
+}
+
+.marge-20{
+  margin-bottom: 30px;
+}
+
+/*---------END HOME--------*/
+
 
   .form-signin {
     max-width: 500px;
