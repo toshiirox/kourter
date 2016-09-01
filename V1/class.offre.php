@@ -12,7 +12,8 @@ class offre_banque {
 
 	public function __construct($id_offre,$nom_agence,$taux_offre,$montant_mini,$type_offre,$user_id){
 		global $connexion;
-		$stmt=$connexion->prepare("INSERT INTO kourter.offre_banque (id_offre, nom_agence, taux_offre, montant_mini, type_offre, user_id) VALUES (NULL, :nom_agence, :taux_offre, :montant_mini, :type_offre, :user_id)");
+		$stmt=$connexion->prepare("INSERT INTO kourter.offre_banque (id_offre, nom_agence, taux_offre, montant_mini, type_offre, user_id) 
+			VALUES (NULL, :nom_agence, :taux_offre, :montant_mini, :type_offre, :user_id)");
 		$stmt->bindValue(':nom_agence',$nom_agence);
 		$stmt->bindValue(':taux_offre',$taux_offre);
 		$stmt->bindValue(':montant_mini',$montant_mini);
