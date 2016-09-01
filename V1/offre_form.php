@@ -13,7 +13,7 @@
 	<!-- NAV -->
 	<?php include('header.php'); ?>
 
-	<div class="container">
+	<section class="container">
 
 		<!-- <form class="template_form" method="post">
 
@@ -52,7 +52,7 @@
 				</select>
 			</div> -->
 			
-			<form class="form-horizontal">
+			<form class="form-horizontal template_form">
 				<fieldset>
 
 					<!-- Form Name -->
@@ -62,17 +62,17 @@
 					<!-- Text input-->
 					<div class="form-group">
 
-						<label class="col-md-4 control-label" for="nom_agence">Nom de l'Agence</label>  
-						<div class="col-md-4">
-							<input id="nom_agence" name="nom_agence" type="text" placeholder="ex: Société Générale - Fulton" class="form-control input-md" required="">
+						<label class="control-label" for="nom_agence">Nom de l'Agence</label>  
+						
+							<input id="nom_agence" name="nom_agence" type="text" placeholder="ex: Société Générale - Fulton" class="form-control" required>
 
-						</div>
+						
 					</div>
 
 					<!-- Text input-->
 					<div class="form-group">
-						<label class="col-md-4 control-label" for="taux_offre">Taux d'Intérêts</label>  
-						<div class="col-md-4">
+						<label class="col-md-8 col-md-offset-2" for="taux_offre">Taux d'Intérêts</label>  
+						<div class="col-md-8 col-md-offset-2">
 							<input id="taux_offre" name="taux_offre" type="number" step="0.01" value="1.00" max="3.00" min="1.00" placeholder="" class="form-control input-md" required="">
 						</div>
 					</div>
@@ -101,7 +101,9 @@
 
 			<div class="annuler">ou <a href="../V1/home.php">Annuler</a></div>
 		</form>
-	</div>
+	</section>
+
+
 </div>
 </div>
 </div>

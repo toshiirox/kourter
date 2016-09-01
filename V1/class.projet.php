@@ -14,9 +14,10 @@ class projet {
 	
 	
 	public function __construct($id_projet,$budget_projet,$nom_client,$prenom_client,$situation_client,$revenu_client,$duree_emprunt,$type_projet,$user_id){
+		$database = new Database();
+		$db = $database->dbConnection();
 		$this->conn = $db;
-		$stmt=$connexion->prepare("INSERT INTO kourter.projet (id_projet,budget_projet,nom_client,prenom_client,situation_client,revenu_client,duree_emprunt,type_projet,user_id) VALUES (NULL, :id_projet, :budget_projet, :nom_client, :prenom_client, :situation_client, :revenu_client, :duree_emprunt, :type_projet, :user_id)");
-		$stmt->bindValue(":id_projet", $id_projet);
+		$stmt=$this->conn->prepare("INSERT INTO kourter.projet (id_projet, budget_projet, nom_client, prenom_client, situation_client, revenu_client, duree_emprunt, type_projet, user_id) VALUES (NULL, :budget_projet, :nom_client, :prenom_client, :situation_client, :revenu_client, :duree_emprunt, :type_projet, :user_id)");
 		$stmt->bindValue(":budget_projet", $budget_projet);
 		$stmt->bindValue(":nom_client", $nom_client);
 		$stmt->bindValue(":prenom_client", $prenom_client);
@@ -25,9 +26,7 @@ class projet {
 		$stmt->bindValue(":duree_emprunt", $duree_emprunt);
 		$stmt->bindValue(":type_projet", $type_projet);
 		$stmt->bindValue(":user_id", $user_id);
-
 		$stmt->execute();
-		$bank=$stmt->fetchObject();
 		$this->id_projet=$id_projet;
 		$this->budget_projet=$budget_projet;
 		$this->nom_client=$nom_client;
