@@ -48,6 +48,14 @@ class offre {
 		return $req;
 	}
 
+	public static function deleteOffreByID($offre_id) {
+		global $connexion;
+		$sql="DELETE FROM offre_banque WHERE id_offre=:offre_id";
+		$req=$connexion->prepare($sql);
+		$req->bindValue(":offre_id",$offre_id);
+		$req->execute();
+	}
+
 	/*public static function getTauxById($id_offre){
 		global $connexion;
 		$req=$connexion->prepare("SELECT taux_offre From offre_banque WHERE ID=:id");

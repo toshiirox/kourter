@@ -5,7 +5,7 @@
 
 	?>
 	<div class="container">
-		<legend><h1>Projet et estimations</h1></legend>
+		<legend><h1>Récapitulatif projet</h1></legend>
 
 		<?php
 		$id_projet=$_GET['id_projet'];
@@ -37,15 +37,31 @@
 			//#################################
 		    //#############LES OFFRES##########
 			//#################################
-
+		?>
+		<legend><h1>Offres disponibles et estimations</h1></legend>
+		<?php
 		$lesOffres=offre::getOffreByType($typeProjet, $user_id,$budgetProjet);
+		echo '<div class="container">';
+		echo '<div class="col-md-offset-2 col-md-8">';
+		echo '<table class="table table-bordered table-result">';
+		echo '<tr><th>Agence</th><th>Taux</th><th>mensualité</th><th>intérêt</th><th>cout de l\'emprunt</th><th>cout à l\'année</th></tr>';
 		while ($ligne2=$lesOffres->fetch()) {
 			$nom_agence=$ligne2->nom_agence;
 			$id_offre=$ligne2->id_offre;
 			$taux_offre=$ligne2->taux_offre;
 			$montant_mini=$ligne2->montant_mini;
-			$mensualité=$budgetProjet*$taux_offre/$dureeEmprunt/12;
-			echo "mensualité :".$mensualité;
+			$mensualité=(($budgetProjet*$taux_offre) / $dureeEmprunt) / 12;
+			$interet=($budgetProjet*$taux_offre) - $budgetProjet;
+			$cout_emprunt=$budgetProjet * $taux_offre;
+			$cout_annee=$cout_emprunt / $dureeEmprunt;
+			echo "<tr>";
+			echo "<td>".$nom_agence."</td>";
+			echo "<td>".$taux_offre."</td>";
+			echo "<td>".$mensualité." €</td>";
+			echo "<td>".$interet." €</td>";
+			echo "<td>".$cout_emprunt." €</td>";
+			echo "<td>".$cout_annee." €</td>";
+			echo "<tr>";
 		}
 		
 		?>

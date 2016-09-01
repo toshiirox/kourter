@@ -55,6 +55,7 @@ class projet {
 		$req->setFetchMode(PDO::FETCH_OBJ);
 		return $req;
 	}
+
 	public static function getProjetbyID($id_projet,$id){
 		global $connexion;
 		$sql="SELECT * FROM projet WHERE id_projet=:id_projet AND user_id=:user_id";
@@ -65,6 +66,14 @@ class projet {
 		// $req->bindValue(':id_projet',$id_projet);
 		$req->setFetchMode(PDO::FETCH_OBJ);
 		return $req;
+	}
+
+	public static function deleteProjetByID($projet_id) {
+		global $connexion;
+		$sql="DELETE FROM projet WHERE id_projet=:projet_id";
+		$req=$connexion->prepare($sql);
+		$req->bindValue(":projet_id",$projet_id);
+		$req->execute();
 	}
 
 
