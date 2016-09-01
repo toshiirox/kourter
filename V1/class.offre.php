@@ -38,7 +38,7 @@ class offre {
 
 	public static function getOffreByType($type, $id){
 		global $connexion;
-		$sql="SELECT * FROM offre_banque WHERE type_offre=:type_offre AND user_id=:user_idr";
+		$sql="SELECT * FROM offre_banque WHERE type_offre=:type_offre AND user_id=:user_id";
 		$req=$connexion->prepare($sql);
 		$req->bindValue(":type_offre",$type);
 		$req->bindValue(":user_id",$id);
