@@ -22,6 +22,7 @@ $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
   <link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
   <script type="text/javascript" src="jquery-1.11.3-jquery.min.js"></script>
   <link rel="stylesheet" href="style.css" type="text/css"  />
+  <title>Kourter</title>
 </head>
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
