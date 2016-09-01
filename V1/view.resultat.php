@@ -13,8 +13,7 @@
 			//#################################
 		    //############LES PROJETS##########
 			//#################################
-
-		$leProjet=projet::getProjetbyID($id_projet);
+		$leProjet=projet::getProjetbyID($id_projet, $user_id);
 		echo '<div class="container">';
 		echo '<div class="col-md-offset-2 col-md-8">';
 		echo '<table class="table table-bordered table-result">';
@@ -36,8 +35,8 @@
 			//#################################
 		    //#############LES OFFRES##########
 			//#################################
-
-		$lesOffres=offre::getOffreByType($typeProjet);
+		
+		$lesOffres=offre::getOffreByType($typeProjet, $user_id);
 		while ($ligne=$lesOffres->fetch()){
 			echo $ligne->id_offre;
 			echo $ligne->type_offre;

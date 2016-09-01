@@ -6,7 +6,7 @@ require_once ('class.projet.php');
 	<legend><h1>Projets</h1></legend>
 
 	<?php
-	$listProjet=projet::getAllfromProjet();
+	$listProjet=projet::getAllfromProjet($user_id);
 
 	echo '<div class="container">';
 	echo '<div class="col-md-offset-2 col-md-8 ">';

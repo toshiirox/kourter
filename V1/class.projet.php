@@ -37,23 +37,23 @@ class projet {
 
 	}
 
-	public static function getAllfromProjet(){
+	public static function getAllfromProjet($id){
 		global $connexion;
-		$req=$connexion->query("SELECT * FROM projet");
+		$req=$connexion->query("SELECT * FROM projet WHERE user_id='.$id.'");
 		$req->setFetchMode(PDO::FETCH_OBJ);
 		return $req;
 	}
 
-	public static function getProjetbyType($type){
+	public static function getProjetbyType($type, $id){
 		global $connexion;
-		$req=$connexion->query("SELECT * FROM projet WHERE type_projet=:type");
+		$req=$connexion->query("SELECT * FROM projet WHERE type_projet=:type AND user_id='.$id'");
 		$req->bindValue(':type',$type);
 		$req->setFetchMode(PDO::FETCH_OBJ);
 		return $req;
 	}
-	public static function getProjetbyID($id_projet){
+	public static function getProjetbyID($id_projet,$id){
 		global $connexion;
-		$sql="SELECT * FROM projet WHERE id_projet=".$id_projet;
+		$sql="SELECT * FROM projet WHERE id_projet='".$id_projet."'AND user_id='".$id."'";
 		$req=$connexion->query($sql);
 		// $req->bindValue(':id_projet',$id_projet);
 		$req->setFetchMode(PDO::FETCH_OBJ);

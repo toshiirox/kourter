@@ -8,7 +8,7 @@
 		<legend><h1>Offres</h1></legend>
 
 		<?php
-		$listOffre=offre::getAllfromOffre();
+		$listOffre=offre::getAllfromOffre($user_id);
 
 		echo '<div class="container">';
 		echo '<div class="col-md-offset-2 col-md-8 ">';

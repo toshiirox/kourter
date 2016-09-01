@@ -27,19 +27,17 @@ class offre {
 		$this->user_id=$user_id;
 	}
 
-	public static function getAllfromOffre(){
+	public static function getAllfromOffre($id){
 		global $connexion;
-		$req=$connexion->query("SELECT * FROM offre_banque");
+		$req=$connexion->query("SELECT * FROM offre_banque WHERE user_id='.$id.'");
 		$req->setFetchMode(PDO::FETCH_OBJ);
 		return $req;
 	}
 
-	public static function getOffreByType($type){
+	public static function getOffreByType($type, $id){
 		global $connexion;
-		$sql="SELECT * FROM offre_banque WHERE type_offre='".$type."'";
-		//$sql="SELECT * FROM offre_banque WHERE type_offre=".$type;
+		$sql="SELECT * FROM offre_banque WHERE type_offre='".$type."'AND user_id='.$id.'";
 		$req=$connexion->query($sql);
-		// $req->bindValue(':type',$type);
 		$req->setFetchMode(PDO::FETCH_OBJ);
 		return $req;
 	}

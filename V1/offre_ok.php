@@ -12,3 +12,6 @@ $offre=new offre(NULL,$nom_agence,$taux_offre,$montant_mini,$type_offre,$user_id
 <body>
 	test on fera du front mamène
 </body>
+
+
+<?php include ('footer.php');  ?>
