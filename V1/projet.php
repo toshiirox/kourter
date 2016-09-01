@@ -72,9 +72,9 @@
           <label class="col-md-4 control-label" for="type_offre">Type du projet</label>
           <div class="col-md-4">
             <select id="type_offre" name="type_offre" class="form-control">
-              <option value="immo">Immobilier</option>
-              <option value="auto">Automobile</option>
-              <option value="etudiant">Étudiant</option>
+              <option value="Immobilier">Immobilier</option>
+              <option value="Automobile">Automobile</option>
+              <option value="Etudiant">Étudiant</option>
             </select>
           </div>
         </div>
