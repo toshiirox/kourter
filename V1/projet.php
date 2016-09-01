@@ -19,5 +19,5 @@
         <button type="submit" class="btn btn-primary btn-block btn-large">Let me in.</button>
       </form>
     </div>
-  </body>.
+  </body>
   </html>

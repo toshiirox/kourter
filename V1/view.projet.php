@@ -9,3 +9,5 @@ while ($ligne=$listProjet->fetch()) {
 }
 
 ?>
+</body>
+</html>
