@@ -30,11 +30,6 @@ echo '</div>';
 ?>
 <form class="form-horizontal">
 	<fieldset>
-		
-		<!-- Form Name -->
-
-
-		<!-- Button (Double) -->
 		<div class="form-group">
 			<div class="col-md-8">
 				<a class="btn btn-success col-xs-3 col-xs-offset-4 " href="view.projet.php" role="button">Projets</a>
