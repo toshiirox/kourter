@@ -32,13 +32,15 @@ $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="../V1/home.php"></a><img class="logo" src="../V1/img/kourter-logo.png" alt="logo kourter" />
+      <a href="../V1/index.php"><img class="logo" src="../V1/img/kourter-logo.png" alt="logo kourter" /></a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-nav-left">
-        <li><a href="projet.php">Projets</a></li>
-        <li><a href="offre.php">Offres</a></li>
-        <li><a href="resultat.php">Comparatif</a></li>
+        <li><a href="projet.php">Nouveau Projet</a></li>
+        <li><a href="offre.php">Nouvelle Offre</a></li>
+        <li><a href="view.projet.php">Voir les projets</a></li>
+        <li><a href="view.offre.php">Voir les offres</a></li>
+
       </ul>
       <ul class="nav navbar-nav navbar-right">
 
@@ -54,3 +56,4 @@ $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
       </div><!--/.nav-collapse -->
     </div>
   </nav>
+  <body>

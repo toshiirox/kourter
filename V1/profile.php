@@ -26,10 +26,4 @@
 
     </div>
 
-
-
-
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-
-  </body>
-  </html>
+    <?php include ('footer.php'); ?>

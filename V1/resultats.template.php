@@ -21,11 +21,11 @@
 
 		<div class="col-md-offset-2 col-md-8 ">
 			<table class="table table-bordered">
-			<tr>
-				<th>Nom</th>
-				<th>Budget</th>
-				<th> Type de Projet</th>
-			</tr>
+				<tr>
+					<th>Nom</th>
+					<th>Budget</th>
+					<th> Type de Projet</th>
+				</tr>
 				<tr>
 					<td>Prénom/Nom Client</td>
 					<td>Budget</td>
@@ -42,6 +42,4 @@
 
 		
 	</div>
-
-</body>
-</html>
+	<?php include ('footer.php'); ?>
