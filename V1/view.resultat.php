@@ -5,7 +5,7 @@
 
 	?>
 	<div class="container">
-		<legend><h1>Offres</h1></legend>
+		<legend><h1>Projet et estimations</h1></legend>
 
 		<?php
 		$id_projet=$_GET['id_projet'];
@@ -29,17 +29,22 @@
 			echo '<td>'.$ligne->type_projet.'</td>';
 			echo'</tr>';
 			$typeProjet=$ligne->type_projet;
+			$budgetProjet=$ligne->budget_projet;
+			$dureeEmprunt=$ligne->duree_emprunt;
 		}
 		echo '</table></div></div>';
 
 			//#################################
 		    //#############LES OFFRES##########
 			//#################################
-		
+
 		$lesOffres=offre::getOffreByType($typeProjet, $user_id);
 		while ($ligne=$lesOffres->fetch()){
-			echo $ligne->id_offre;
-			echo $ligne->type_offre;
+			$id_offre=$ligne->id_offre;
+			$type_offre=$ligne->type_offre;
+			$taux_offre=$ligne->taux_offre;
+			$montant_mini=$ligne->montant_mini;
+			$mensualité=$budgetProjet*$taux_offre/$dureeEmprunt/12;
 
 		}
 		
