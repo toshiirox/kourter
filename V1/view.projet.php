@@ -11,7 +11,7 @@ require_once ('class.projet.php');
 	echo '<div class="container">';
 	echo '<div class="col-md-offset-2 col-md-8 ">';
 	echo '<table class="table table-bordered table-result">';
-	echo '<tr><th>Nom</th><th>Budget</th><th>Type de Projet</th><th>lien</th></tr>';
+	echo '<tr><th>Nom</th><th>Budget</th><th>Type de Projet</th><th>Lien</th></tr>';
 	while ($ligne=$listProjet->fetch()) {
 		echo "<tr>";
 		echo "<td>".$ligne->nom_client." ".$ligne->prenom_client."</td>";

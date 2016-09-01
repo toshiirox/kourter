@@ -33,6 +33,14 @@
   .navbar-nav-left>a{
 
   }
+
+  #navbar ul li a:hover{
+    color: #18157c;
+  }
+
+   #navbar ul li a:active{
+    color: #18157c;
+  }
   /*----------END NAVBAR----------*/
 
 
@@ -75,6 +83,10 @@
 
 .marge-20{
   margin-bottom: 30px;
+}
+
+.marge-40{
+  margin-bottom: 60px;
 }
 
 /*---------END HOME--------*/
@@ -284,7 +296,7 @@ label{
 
 /*---------------Boutons Formumaires------------------*/
 .btn-valider{
-  width: 60%;
+  width: 100%;
   padding: 15px 30px;
   margin:0 auto;
 
@@ -310,6 +322,13 @@ label{
   text-decoration: none;
 
 }
+
+.title{
+  font-family: 'Lato', 'Open Sans', Helvetica, Arial, Tahoma, sans-serif;
+  font-weight: bold;
+  color: #0075ff;
+  font-size: 20px;
+  }
 /*------------END Boutons Formulaires------------*/
 
 .table-result {

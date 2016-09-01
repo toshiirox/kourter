@@ -50,7 +50,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="valid_offre"></label>
   <div class="col-md-4">
-   <button id="valid_offre" name="valid_offre" class="col-xs-6 col-xs-offset-3 btn btn-success">Ajouter une offre</button>
+   <button id="valid_offre" name="valid_offre" class="col-xs-6 col-xs-offset-3 btn btn-valider">Ajouter une offre</button>
  </div>
 </div>
 
