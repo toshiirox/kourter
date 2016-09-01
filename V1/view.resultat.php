@@ -1,5 +1,3 @@
-<body>
-	
 	<?php 
 	include ('header.php');
 	require_once ('class.projet.php');
@@ -41,6 +39,5 @@
 	}
 	
 	?>
-</body>
-</html>
+	<?php include ('footer.php'); ?>
 

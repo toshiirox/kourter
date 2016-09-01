@@ -19,4 +19,4 @@ while ($ligne=$listProjet->fetch()) {
 echo "</table></div></div>";
 
 ?>
-</html>
+<?php include ('footer.php'); ?>

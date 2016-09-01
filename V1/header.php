@@ -56,3 +56,4 @@ $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
       </div><!--/.nav-collapse -->
     </div>
   </nav>
+  <body>
