@@ -55,26 +55,5 @@ class offre {
 		$req->bindValue(":offre_id",$offre_id);
 		$req->execute();
 	}
-
-	/*public static function getTauxById($id_offre){
-		global $connexion;
-		$req=$connexion->prepare("SELECT taux_offre From offre_banque WHERE ID=:id");
-		$req->bindValue(":id",$id_offre);
-		$Taux1=$req->fetchObject();
-		return $Taux1;
-
-	}*/
-
-	public function Text(){
-		echo $this->Nom." ".$this->Taux;
-	}
 }
-
-/*$bank1=new Banque('1');*/
-/*$bank1->Text();*/
-/*$listeBank=Banque::getAllBanks();
-while ($ligne=$listeBank->fetch()) {
-			echo $ligne->ID." ".$ligne->Nom." ".$ligne->Taux." ".$ligne->Date_modif." <br>";
-		}*/
-
-		?>
+?>

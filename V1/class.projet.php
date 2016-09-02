@@ -63,7 +63,6 @@ class projet {
 		$req->bindValue(":id_projet",$id_projet);
 		$req->bindValue(":user_id",$id);
 		$req->execute();
-		// $req->bindValue(':id_projet',$id_projet);
 		$req->setFetchMode(PDO::FETCH_OBJ);
 		return $req;
 	}

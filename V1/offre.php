@@ -1,4 +1,5 @@
   <?php include ('header.php'); ?>
+
   <div class="container">
     <legend><h1>Ajout d'Offre</h1></legend>
 
@@ -41,7 +42,7 @@
    <select id="type_offre" name="type_offre" class="form-control">
     <option value="Immobilier">Immobilier</option>
     <option value="Automobile">Automobile</option>
-    <option value="Etudiant">Etudiant</option>
+    <option value="Etudiant">Étudiant</option>
   </select>
 </div>
 </div>
