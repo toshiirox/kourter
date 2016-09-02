@@ -44,7 +44,7 @@
 		echo '<div class="container">';
 		echo '<div class="col-md-offset-2 col-md-8">';
 		echo '<table class="table table-bordered table-result">';
-		echo '<tr><th>Agence</th><th>Taux</th><th>mensualité</th><th>intérêt</th><th>cout de l\'emprunt</th><th>cout à l\'année</th></tr>';
+		echo '<tr><th>Agence</th><th>Taux</th><th>Mensualité</th><th>Intérêt</th><th>Coût de l\'emprunt</th><th>Coût à l\'année</th></tr>';
 		while ($ligne2=$lesOffres->fetch()) {
 			$nom_agence=$ligne2->nom_agence;
 			$id_offre=$ligne2->id_offre;

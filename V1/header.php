@@ -49,7 +49,7 @@ $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
             <span class="glyphicon glyphicon-user"></span>&nbsp;Bonjour <?php echo $userRow['user_email']; ?>&nbsp;<span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="profile.php"><span class="glyphicon glyphicon-user"></span>&nbsp;Voir Profil</a></li>
+              <!-- <li><a href="profile.php"><span class="glyphicon glyphicon-user"></span>&nbsp;Voir Profil</a></li> -->
               <li><a href="logout.php?logout=true"><span class="glyphicon glyphicon-log-out"></span>&nbsp;Deconnexion</a></li>
             </ul>
           </li>
