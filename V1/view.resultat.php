@@ -53,14 +53,15 @@
 			$mensualite=(($budgetProjet*($taux_offre/100+1)) / $dureeEmprunt) / 12;
 			$mensualite=round($mensualite,2);
 			$interet=($budgetProjet*($taux_offre/100));
-			$cout_emprunt=$budgetProjet + $interet;
-			$cout_annee=$cout_emprunt / $dureeEmprunt;
+			$cout_total=$budgetProjet + $interet;
+			$cout_annee=$cout_total / $dureeEmprunt;
+			$cout_annee=round($cout_annee,2);
 			echo "<tr>";
 			echo "<td>".$nom_agence."</td>";
 			echo "<td>".$taux_offre."</td>";
 			echo "<td>".$mensualite." €</td>";
 			echo "<td>".$interet." €</td>";
-			echo "<td>".$cout_emprunt." €</td>";
+			echo "<td>".$cout_total." €</td>";
 			echo "<td>".$cout_annee." €</td>";
 			echo "<tr>";
 		}
