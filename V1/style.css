@@ -334,3 +334,12 @@ table {
 .table-result {
   font-size: 16px;
 }
+
+
+/*----------------TABLEAU------------*/
+
+.table-white{
+  background-color: #fff;
+}
+
+/*----------------END TABLEAU------------*/
